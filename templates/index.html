@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Scanner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Network Scanner</h1>
+        <form action="/scan" method="post">
+            <div class="mb-3">
+                <label for="target" class="form-label">Target IP</label>
+                <input type="text" class="form-control" id="target" name="target" required>
+            </div>
+            <div class="mb-3">
+                <label for="scan_type" class="form-label">Scan Type</label>
+                <select class="form-select" id="scan_type" name="scan_type">
+                    <option value="quick">Quick Scan</option>
+                    <option value="full">Full Scan</option>
+                    <option value="service">Service Version</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="port_selection" class="form-label">Port Selection</label>
+                <select class="form-select" id="port_selection" name="port_selection">
+                    <option value="top10">Top 10 Ports</option>
+                    <option value="top100">Top 100 Ports</option>
+                    <option value="top1000">Top 1000 Ports</option>
+                    <option value="custom">Custom Ports</option>
+                </select>
+                <input type="text" class="form-control mt-2" id="custom_ports" name="custom_ports" placeholder="Enter custom ports (comma-separated)" style="display:none;">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <script>
+            document.getElementById('port_selection').addEventListener('change', function () {
+                var customPortsInput = document.getElementById('custom_ports');
+                if (this.value === 'custom') {
+                    customPortsInput.style.display = 'block';
+                } else {
+                    customPortsInput.style.display = 'none';
+                }
+            });
+        </script>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

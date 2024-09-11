@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - Network Scanner</title>
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Network Scanner Help & Documentation</h1>
+        <div class="accordion" id="helpAccordion">
+            <!-- Introduction -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Introduction
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#helpAccordion">
+                    <div class="accordion-body">
+                        Welcome to the Network Scanner tool! This tool is designed for both beginners and experienced network administrators. It helps you quickly identify open ports, running services, and other useful information on a target machine or network.
+                    </div>
+                </div>
+            </div>
+
+            <!-- How to Use the Tool -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How to Use the Tool
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#helpAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><strong>Step 1: Enter Target IP/Hostname</strong> - In the target field, you can input an IP address (e.g., 192.168.1.1) or a hostname (e.g., example.com).</li>
+                            <li><strong>Step 2: Choose Scan Type</strong> - You can select different scan types: Quick Scan (scans common ports), Full Scan (scans all ports), Aggressive Scan (intensive scan), etc.</li>
+                            <li><strong>Step 3: Start Scan</strong> - Click the "Start Scan" button to begin the network scan.</li>
+                            <li><strong>Step 4: View Results</strong> - Once the scan is complete, results are displayed in a table, showing open ports, services, and more.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scan Types Explained -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Scan Types Explained
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#helpAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><strong>Quick Scan:</strong> Scans the most commonly used ports. It’s fast and gives a quick overview of the target.</li>
+                            <li><strong>Full Scan:</strong> Scans all available ports to provide a comprehensive look at open services.</li>
+                            <li><strong>Aggressive Scan:</strong> Runs additional service and OS detection techniques for deeper information. It’s more intrusive but provides more detailed results.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQs -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Frequently Asked Questions (FAQs)
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#helpAccordion">
+                    <div class="accordion-body">
+                        <p><strong>1. What is a port scan?</strong></p>
+                        <p>A port scan is a method used to determine which ports on a network are open and accepting connections. It helps identify services running on a network.</p>
+
+                        <p><strong>2. Is port scanning illegal?</strong></p>
+                        <p>Port scanning is not inherently illegal, but scanning networks without permission can be considered a violation of laws in many countries. Always get consent before scanning.</p>
+
+                        <p><strong>3. What is an IP address?</strong></p>
+                        <p>An IP address is a unique identifier for a device on a network. You need the target’s IP address or hostname to scan it.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Contact Information
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#helpAccordion">
+                    <div class="accordion-body">
+                        <p>If you have any questions or need assistance, please contact our support team at <strong>support@networkscanner.com</strong>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <a href="/" class="btn btn-primary">Back to Home</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
